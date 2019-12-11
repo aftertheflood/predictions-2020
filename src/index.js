@@ -22,4 +22,7 @@ const prediction = seed => {
 window.onload = ()=>{
     let seed = Math.random();
     console.log(prediction(seed));
+    const result = prediction(seed);
+    document.querySelector('#prediction-fragment').innerHTML = result.sentence;
+    document.querySelector('#refresh').href = `/?seed=${Math.random()}`;
 }
