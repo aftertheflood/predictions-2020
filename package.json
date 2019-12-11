@@ -1,0 +1,19 @@
+{
+  "name": "prediction-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npx browser-sync start --server",
+    "build": "npx webpack ./src/index.js -o ./main.js --watch"
+  },
+  "author": "tom@aftertheflood.com",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "seedrandom": "^3.0.5",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
