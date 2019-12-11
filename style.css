@@ -1,3 +1,37 @@
-body {
+*{
     font-family: sans-serif;
+}
+body{
+    margin:2vw;
+}
+.intro{
+    padding-top: 10vh;
+    font-weight: bold;
+    text-align: center;
+}
+.prediction{
+    font-weight:bold;
+    font-size:10vh;
+    transform-origin: top left;
+    transform: skew(10deg, 0);
+}
+.ui{
+    font-weight:bold;
+    font-size:10vh;
+    transform-origin: bottom left;
+    transform: skew(-10deg, 0);
+    background:black;
+    color:white;
+}
+.link{
+    color:white;
+    text-decoration:none;
+}
+.link:hover{
+    color:red;
+}
+footer{
+    padding-top:30px;
+    color:grey;
+    text-align:right;
 }
