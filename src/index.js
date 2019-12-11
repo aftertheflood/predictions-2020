@@ -7,10 +7,11 @@ const prediction = seed => {
     if (!seed) {
         seed = Math.floor(Math.random() * 10000000);
     }
+    console.log(data);
     const rng = seedrandom(String(seed));
-    const adj = randomElement(rng(), data.adjectives);
-    const noun = randomElement(rng(), data.nouns);
-    const mrkt = randomElement(rng(), data.markets);
+    const adj = randomElement(rng(), data.adjective);
+    const noun = randomElement(rng(), data.noun);
+    const mrkt = randomElement(rng(), data.marketsegment);
     let sentence = `${adj} ${noun} for ${mrkt}.`;
     sentence = sentence[0].toUpperCase() + sentence.substring(1);
     return {
