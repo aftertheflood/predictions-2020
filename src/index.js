@@ -3,7 +3,7 @@ const prediction = require('./generator');
 
 let pullDeltaX = 0;
 let deg = 0;
-let decisionThreshold = 80;
+let decisionThreshold = 150;
 let swiping = true;
 const dragOrigin = [];
 
@@ -34,8 +34,18 @@ function startSwipe(e){
 }
 
 function stopSwipe(e){
-    swiping = true;
+    swiping = false;
     console.log('stop', this);
+    const card = this;
+    if (Math.abs(pullDeltaX) < decisionThreshold) {
+        card.classList.add('reset');
+    }
+
+    setTimeout(()=>{
+        card.classList.remove('reset');
+        card.style.transform = '';
+        pullDeltaX = 0;
+        }, 300);
 }
 
 function move(e){

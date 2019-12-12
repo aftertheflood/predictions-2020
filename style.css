@@ -28,6 +28,14 @@ article{
     transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
+.card.reset{
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+}
+
 .card.to-left {
 -webkit-transform: translateX(-30rem) rotate(-30deg) !important;
         transform: translateX(-30rem) rotate(-30deg) !important;
