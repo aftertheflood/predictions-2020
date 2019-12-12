@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "npx browser-sync start --server",
-    "build": "npx webpack ./src/index.js -o ./main.js --watch"
+    "build": "npx webpack ./src/index.js -o ./main.js --watch",
+    "data": "node ./tools/getData.js"
   },
   "author": "tom@aftertheflood.com",
   "license": "ISC",
