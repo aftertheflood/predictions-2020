@@ -9,6 +9,7 @@ let mouse= false;
 
 
 const newSeed = ()=>{
+    console.log('new seed');
     const seed = Math.floor(Math.random()*1000000000000);
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set('seed', seed);
@@ -19,11 +20,14 @@ const newSeed = ()=>{
 const tagify = (s)=> s.replace(/[\s\W]/g,'');
 
 const newPrediction = (seed)=>{
+    console.log('newPrediction');
     const result = prediction( seed );
-    document.querySelector('#prediction-fragment').innerHTML = result.sentence;
-    document.querySelector('#seed-link').innerHTML = seed;
-    document.querySelector('.tweet-link').href = `https://twitter.com/share?text=Prediction: ${result.prediction}&url=${window.location}&hashtags=2020,predictions,thoughtleadership,${tagify(result.mrkt)},${tagify(result.noun)}`;
-
+    document.querySelector('.card.active')
+        .innerHTML = `<div>${result.sentence}</div>
+            <div>${seed}</div>
+            <div>
+                <a class="tweet-link" href="https://twitter.com/share?text=Prediction: ${result.prediction}&url=${window.location}&hashtags=2020,predictions,thoughtleadership,${tagify(result.mrkt)},${tagify(result.noun)}"></a>
+            </div>`;
 }
 
 function startSwipeMouse(e){
@@ -31,12 +35,10 @@ function startSwipeMouse(e){
     dragOrigin[0] = e.pageX || e.originalEvent.touches[0].pageX;
     dragOrigin[1] = e.pageY || e.originalEvent.touches[0].pageY;
     swiping = true;
-    console.log('start', this);
 }
 
 function stopSwipe(e){
     swiping = false;
-    console.log('stop', this);
     const card = this;
     if(Math.abs(pullDeltaX)>decisionThreshold){
         discard(card);
@@ -48,8 +50,6 @@ function stopSwipe(e){
             pullDeltaX = 0;
             }, 300);
     }
-
-
 }
 
 function move(e){
@@ -61,6 +61,7 @@ function move(e){
 }
 
 function discard(card){
+    console.log('discard');
     card.classList.add('inactive');
     card.classList.remove('active');
     if (pullDeltaX >= decisionThreshold) {
@@ -79,7 +80,6 @@ function discard(card){
 }
 
 function pullChange(card) {
-    console.log(card, pullDeltaX);
     card.style.transform = `translateX(${pullDeltaX}px) rotate(${pullDeltaX/10}deg)`;
     if(Math.abs(pullDeltaX)>decisionThreshold && !mouse){
         discard(card)
@@ -87,6 +87,7 @@ function pullChange(card) {
 }
 
 function newActiveCard(){
+    console.log('newActiveCard');
     if (document.querySelector('.active.card') == null){
         const newCard = document.createElement('div'); 
         newCard.classList.add('card');
@@ -94,14 +95,12 @@ function newActiveCard(){
         document.querySelector('.card-stack')
             .append(newCard);            
     }
-
+    newPrediction(newSeed());
     swipeable();
-    console.log('NEW');
-    // add a new card first in the node list
-    // get a new prediction
 }
 
 const swipeable = ()=>{
+    console.log('swipeable');
     document.querySelector('.card.active').addEventListener('mousedown', startSwipeMouse);
     document.querySelector('.card.active').addEventListener('mouseup', stopSwipe);
     document.querySelector('.card.active').addEventListener('mouseout', stopSwipe);
@@ -114,10 +113,4 @@ window.onload = ()=>{
     const seed = querySeed ? querySeed : newSeed();
     swipeable();
     newPrediction(seed);
-    document.querySelector('#refresh').onclick = (e)=>{
-        console.log('refresh')
-        e.preventDefault();
-        newPrediction(newSeed());
-        return false;
-    }
 }

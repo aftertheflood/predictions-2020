@@ -19,7 +19,6 @@ const prediction = seed => {
 };
 
 const select = (s, rand)=> { // in a string in which things are enclosed in square brackets replace the thinsg with one option from within
-    console.log('S',s )
     if(!rand){ rand = Math.random(); }
     if(s.indexOf('[') < 0){ return s; }
     //is it a range or a select? // \[(\d+-\d+)\]
