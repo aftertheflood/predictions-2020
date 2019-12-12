@@ -1,5 +1,4 @@
 * {
-	/* font-family: serif; */
 	font-variant-ligatures: common-ligatures;
 	font-kerning: normal;
 	text-rendering: optimizeLegibility;
@@ -86,4 +85,52 @@ footer {
 	text-align: right;
 	font-family: sans-serif;
 	letter-spacing: 0.07em;
+}
+
+
+
+
+
+
+/* Media queries
+----------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+	article {
+		max-width: 80%;
+	}
+	.prediction {
+		font-size: 7vh;
+		line-height: 1.05em;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	article {
+		transform: skew(-4deg, 0);
+		max-width: 75%;
+		padding: 20px 26px 26px;
+	}
+	.prediction {
+		font-size: 6vh;
+		line-height: 1.1em;
+	}
+	.more-link, .tweet-link {
+		font-size: 3.5vh;
+		padding: 10px 17px;
+	} 
+}
+
+@media only screen and (max-width: 600px) {
+	article {
+		transform: skew(-3deg, 0);
+		max-width: 65%;
+		padding: 18px 22px 22px;
+	}
+	.prediction {
+		font-size: 5vh;
+	}
+	.more-link, .tweet-link {
+		padding: 10px 15px;
+	} 
 }
