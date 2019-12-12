@@ -4,11 +4,16 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	transition: all 2s ease;
+
 }
 
 body {
 	background: seashell;
 	margin: 0;
+}
+body:hover {
+	/* background: blanchedalmond; */
 }
 
 section {
@@ -66,6 +71,7 @@ article {
 	text-decoration: none;
 	display: visible !important;
 	border-radius: 4px;
+	transition: background 0.7s ease;
 }
 
 .more-link {
@@ -73,7 +79,7 @@ article {
 	margin-right: 6px;
 }
 
-.more-link:hover { background: red; }
+.more-link:hover  { background: red; }
 .tweet-link:hover { background: blue; }
 
 footer {
