@@ -14,12 +14,12 @@ fetch(sheet)
             });
             return data;
         }, {
-            timeline:[],
+//            timeline:[],
             likelihood:[],
             adjective:[],
             noun:[],
             marketsegment:[]
         });
-        fs.writeFileSync(`${process.cwd()}/src/data.json`, JSON.stringify(data))
+        fs.writeFileSync(`${process.cwd()}/src/data.json`, JSON.stringify(data,null,'  '));
         console.log('done');
     });
