@@ -1,37 +1,89 @@
-*{
-    font-family: sans-serif;
+* {
+	/* font-family: serif; */
+	font-variant-ligatures: common-ligatures;
+	font-kerning: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-body{
-    margin:2vw;
+
+body {
+	background: seashell;
+	margin: 0;
 }
-.intro{
-    padding-top: 10vh;
-    font-weight: bold;
-    text-align: center;
+
+section {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
 }
-.prediction{
-    font-weight:bold;
-    font-size:10vh;
-    transform-origin: top left;
-    transform: skew(10deg, 0);
+
+article {
+	transform: skew(-5deg, 0);
+	background: white;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 24px 30px 30px;
+	max-width: 1000px;
+	box-shadow: 2px 3px 100px lightsalmon;
+	border-radius: 10px;
 }
-.ui{
-    font-weight:bold;
-    font-size:10vh;
-    transform-origin: bottom left;
-    transform: skew(-10deg, 0);
-    background:black;
-    color:white;
+
+.prediction, .ui {
 }
-.link{
-    color:white;
-    text-decoration:none;
+
+/* .intro {
+	padding-top: 10vh;
+	text-align: center;
+} */
+
+.prediction {
+	font-size: 8.5vh;
+	line-height: 1em;
+	letter-spacing: -0.01em;
+	transform: scaleX(0.95);
+	transform-origin: 0 0;
 }
-.link:hover{
-    color:red;
+
+.ui {
+	margin-top: 40px;
+	}
+
+.ui:hover {
 }
-footer{
-    padding-top:30px;
-    color:grey;
-    text-align:right;
+
+.more-link, .tweet-link {
+	display: inline-block;
+	background: black;
+	color: white;
+	padding: 13px 22px 13px;
+	font-size: 4.5vh;
+	font-family: sans-serif;
+	letter-spacing: -0.01em;
+	font-weight: bold;
+	line-height: 1;
+	text-decoration: none;
+	display: visible !important;
+	border-radius: 4px;
+}
+
+.more-link {
+	margin-bottom: 6px;
+	margin-right: 6px;
+}
+
+.more-link:hover { background: red; }
+.tweet-link:hover { background: blue; }
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 10px;
+	color: coral;
+	text-align: right;
+	font-family: sans-serif;
+	letter-spacing: 0.07em;
 }
