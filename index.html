@@ -6,13 +6,19 @@
 </head>
 <body>
     <article>
-    <div class="intro"><p>The next ten years promises:</p></div>
-    <div class="prediction"><span id="prediction-fragment">SORRY, THE FUTURE NEEDS JAVASCRIPT :(</span></div>
-    <div class="ui">
+        <div class="intro"><p>The next ten years promises:</p></div>
+        <div class="card-stack">
+            <div class="card inactive">
+                <div class="prediction"><span id="next-prediction">...</span></div>
+            </div>
+            <div class="card active">
+                <div class="prediction"><span id="prediction-fragment">SORRY, THE FUTURE NEEDS JAVASCRIPT :(</span></div>
+            </div>
+        </div>
         <a href="/" class="link" id="refresh">Different future please!</a>
         <a href="" class="tweet-link">TWEET IT!</a>
-    </div>
+        <footer>prediction: <span id="seed-link"></span></footer> 
     </article>
-    <footer>prediction: <span id="seed-link"></span></footer>
+
 </body>
 </html>

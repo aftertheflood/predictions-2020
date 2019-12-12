@@ -4,29 +4,61 @@
 body{
     margin:2vw;
 }
+article{
+    position: absolute;
+    left: 50%;
+}
+
+.card{
+    border:1px solid black;
+    width:200px;
+    height:300px;
+    background-color: grey;
+    color:white;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 50% 100%;
+}
+
+.card.inactive{
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.card.to-left {
+-webkit-transform: translateX(-30rem) rotate(-30deg) !important;
+        transform: translateX(-30rem) rotate(-30deg) !important;
+}
+
+.card.to-right {
+-webkit-transform: translate(30rem) rotate(30deg) !important;
+        transform: translate(30rem) rotate(30deg) !important;
+}
+
 .intro{
-    padding-top: 10vh;
     font-weight: bold;
     text-align: center;
 }
+
 .prediction{
     font-weight:bold;
-    font-size:10vh;
     transform-origin: top left;
-    transform: skew(10deg, 0);
 }
+
 .ui{
     font-weight:bold;
-    font-size:10vh;
     transform-origin: bottom left;
-    transform: skew(-10deg, 0);
     background:black;
     color:white;
 }
+
 .link{
-    color:white;
     text-decoration:none;
 }
+
 .link:hover{
     color:red;
 }
