@@ -9,6 +9,7 @@ article{
     left: 50%;
 }
 
+/* START  card swpe stuff */
 .card{
     border:1px solid black;
     width:200px;
@@ -23,9 +24,9 @@ article{
 }
 
 .card.inactive{
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s, opacity 0.5s;
 }
 
 .card.reset{
@@ -39,12 +40,16 @@ article{
 .card.to-left {
 -webkit-transform: translateX(-30rem) rotate(-30deg) !important;
         transform: translateX(-30rem) rotate(-30deg) !important;
+        opacity:0;
 }
 
 .card.to-right {
 -webkit-transform: translate(30rem) rotate(30deg) !important;
         transform: translate(30rem) rotate(30deg) !important;
+        opacity:0;
 }
+
+/* END card swipe stuff */
 
 .intro{
     font-weight: bold;

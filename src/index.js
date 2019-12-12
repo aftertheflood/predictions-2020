@@ -2,10 +2,10 @@
 const prediction = require('./generator');
 
 let pullDeltaX = 0;
-let deg = 0;
 let decisionThreshold = 150;
-let swiping = true;
+let swiping = false;
 const dragOrigin = [];
+let mouse= false;
 
 
 const newSeed = ()=>{
@@ -26,7 +26,8 @@ const newPrediction = (seed)=>{
 
 }
 
-function startSwipe(e){
+function startSwipeMouse(e){
+    mouse = true;
     dragOrigin[0] = e.pageX || e.originalEvent.touches[0].pageX;
     dragOrigin[1] = e.pageY || e.originalEvent.touches[0].pageY;
     swiping = true;
@@ -37,15 +38,18 @@ function stopSwipe(e){
     swiping = false;
     console.log('stop', this);
     const card = this;
-    if (Math.abs(pullDeltaX) < decisionThreshold) {
+    if(Math.abs(pullDeltaX)>decisionThreshold){
+        discard(card);
+    }else{
         card.classList.add('reset');
+        setTimeout(()=>{
+            card.classList.remove('reset');
+            card.style.transform = '';
+            pullDeltaX = 0;
+            }, 300);
     }
 
-    setTimeout(()=>{
-        card.classList.remove('reset');
-        card.style.transform = '';
-        pullDeltaX = 0;
-        }, 300);
+
 }
 
 function move(e){
@@ -56,30 +60,52 @@ function move(e){
     pullChange(document.querySelector('.card.active'));
 }
 
-function discard(activeCard){
-    activeCard.classList.add('inactive');
-    activeCard.classList.remove('active');
+function discard(card){
+    card.classList.add('inactive');
+    card.classList.remove('active');
     if (pullDeltaX >= decisionThreshold) {
-        activeCard.classList.add('to-right');
+        card.classList.add('to-right');
     } else if (pullDeltaX <= -decisionThreshold) {
-        activeCard.classList.add('to-left');
+        card.classList.add('to-left');
     }
+    newActiveCard();
+    setTimeout(()=>{
+        //TODO REMOVE THIS card and set the next card in the stack to active, get a prediction and pop a new card underneath it
+        card.remove();
+        pullDeltaX = 0;
+        }, 500);
+
     // set new active card
 }
 
-function pullChange(activeCard) {
-    console.log(activeCard, pullDeltaX);
-    activeCard.style.transform = `translateX(${pullDeltaX}px) rotate(${pullDeltaX/10}deg)`;
-    if(Math.abs(pullDeltaX)>decisionThreshold){
-        discard(activeCard)
+function pullChange(card) {
+    console.log(card, pullDeltaX);
+    card.style.transform = `translateX(${pullDeltaX}px) rotate(${pullDeltaX/10}deg)`;
+    if(Math.abs(pullDeltaX)>decisionThreshold && !mouse){
+        discard(card)
     }
 }
 
+function newActiveCard(){
+    if (document.querySelector('.active.card') == null){
+        const newCard = document.createElement('div'); 
+        newCard.classList.add('card');
+        newCard.classList.add('active');
+        document.querySelector('.card-stack')
+            .append(newCard);            
+    }
+
+    swipeable();
+    console.log('NEW');
+    // add a new card first in the node list
+    // get a new prediction
+}
+
 const swipeable = ()=>{
-    document.querySelector('.card.active').addEventListener('mousedown', startSwipe);
+    document.querySelector('.card.active').addEventListener('mousedown', startSwipeMouse);
     document.querySelector('.card.active').addEventListener('mouseup', stopSwipe);
     document.querySelector('.card.active').addEventListener('mouseout', stopSwipe);
-    document.addEventListener('mousemove', move)
+    document.addEventListener('mousemove', move);
 }
 
 window.onload = ()=>{
