@@ -6,17 +6,18 @@
     "We might have to contend with",
     "In the [short|long|medium] term we should expect",
     "Investors will [get excited about|go crazy over]",
-    "[MBA courses|post-grad diplomas|undergraduate degrees] will include modules on",
-    "[WTO|UN|World bank] reports sugest we will see",
+    "[MBA courses|Post-grad diplomas|Undergraduate degrees] will include modules on",
+    "[WTO|UN|World Bank] reports suggest we will see",
     "The Big 4 will put their weight behind",
-    "Silicon valley investors will pivot to",
+    "Silicon Valley investors will pivot to",
     "[DARPA|CERN] will initate research on",
     "China will beat the West on",
     "Speculators will go [long|short] on",
     "We may see",
     "We could be surprised by",
     "The EU will be overwhelmed by",
-    "Britain will see"
+    "Britain will see",
+    "Regulators will [struggle with|clamp down on]"
   ],
   "adjective": [
     "woke",
@@ -108,7 +109,8 @@
     "personal",
     "omni-channel",
     "quantified",
-    "the Uber of"
+    "the Uber of",
+    "pixel-perfect"
   ],
   "noun": [
     "fintech",
@@ -159,7 +161,6 @@
     "fixed-odds betting terminals",
     "DNA sequencing",
     "ICOs",
-    "theory of mind",
     "nanobots",
     "genome editing",
     "AR art exhibits",
@@ -194,7 +195,6 @@
     "middleware",
     "innovation",
     "revenue streams",
-    "range planning",
     "e-commerce",
     "competitor analysis",
     "Black Friday sales",
@@ -257,7 +257,7 @@
     "early-years education",
     "the 99%",
     "Nando’s obsessives",
-    "stans",
+    "white van man",
     "thought leaders",
     "freegans",
     "hedge funds",
@@ -295,7 +295,6 @@
     "AR developers",
     "urban agriculture specialists",
     "biomech technicians",
-    "problem-solving competition directors",
     "weather control engineers",
     "personal microbiome managers",
     "creatives",
@@ -313,6 +312,7 @@
     "HR departments",
     "smart-city skeptics",
     "Humanity 2.0",
-    "futurists"
+    "futurists",
+    "data-trash engineers"
   ]
 }
