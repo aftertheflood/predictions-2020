@@ -12,13 +12,16 @@ body {
 	margin: 0;
 }
 
+
+.titling-wrapper { text-align: center; }
+
 .titling {
 	margin-top: 48px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	max-width: 1400px;
 	transform: skew(12deg, 0);
+	display: inline-block;
 }
 
 h1 {
@@ -133,15 +136,9 @@ footer {
 ----------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1200px) {
-	h1 {
-		font-size: 5.5vh;
-	}
-	h2 {
-		font-size: 21px;
-	}
-	article {
-		max-width: 80%;
-	}
+	h1 { font-size: 5.5vh; }
+	h2 { font-size: 21px; }
+	article { max-width: 80%; }
 	.prediction {
 		font-size: 7vh;
 		line-height: 1.05em;
@@ -149,9 +146,6 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-	h1 {
-		/* font-size: 5vh; */
-	}
 	article {
 		transform: skew(-4deg, 0);
 		padding: 20px 0 26px 26px;
@@ -167,20 +161,14 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-	h2 {
-		font-size: 19px;
-	}
+	h2 { font-size: 19px; }
 	article {
 		transform: skew(-3deg, 0);
 		max-width: 78%;
 		padding: 17px 8px 20px 20px;
 	}
-	.prediction {
-		font-size: 5vh;
-	}
-	.ui {
-		margin-top: 28px;
-	}
+	.prediction { font-size: 5vh; }
+	.ui { margin-top: 28px; }
 	.more-link, .tweet-link {
 		padding: 15px 19px;
 		font-size: 2.7vh;
@@ -188,7 +176,5 @@ footer {
 }
 
 @media only screen and (max-width: 420px) {
-	h1 {
-		font-size: 5vh;
-	}
+	h1 { font-size: 5vh; }
 }
