@@ -128,6 +128,12 @@ footer {
 }
 
 
+#seed-link a,
+#seed-link a:visited,
+#seed-link a:hover{
+    text-decoration: none;
+    color: coral;
+}
 
 
 

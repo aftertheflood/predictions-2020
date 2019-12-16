@@ -14,7 +14,7 @@ const tagify = (s)=> s.replace(/[\s\W]/g,'');
 const newPrediction = (seed)=>{
     const result = prediction( seed );
     document.querySelector('#prediction-fragment').innerHTML = result.sentence;
-    document.querySelector('#seed-link').innerHTML = seed;
+    document.querySelector('#seed-link').innerHTML = `<a href="${window.location}">${seed}</a>`;
     document.querySelector('.tweet-link').href = `https://twitter.com/share?text=Prediction: ${result.prediction}&url=${window.location}&hashtags=2020,predictions,thoughtleadership,${tagify(result.mrkt)},${tagify(result.noun)}`;
 }
 
