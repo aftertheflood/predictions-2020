@@ -2,8 +2,8 @@
   "likelihood": [
     "Over the next [2-50] years we’ll see",
     "As soon as [2021-2029] we may have to deal with",
-    "We could be confronted by",
-    "We might have to contend with",
+    "We could soon be confronted by",
+    "We might soon have to contend with",
     "In the [short|long|medium] term we should expect",
     "Investors will [get excited about|go crazy over]",
     "[MBA courses|Post-grad diplomas|Undergraduate degrees] will include modules on",
@@ -15,13 +15,14 @@
     "Speculators will go [long|short] on",
     "We may see",
     "We could be surprised by",
-    "[Britain|The US|The EU|China] will be overwhelmed by",
-    "[Britain|The US|The EU|China] anticipates the rise of",
+    "[Britain|The US|The EU|China] will be see a wave of",
+    "Policy makers in [Britain|The US|The EU|China] anticipate the rise of",
     "Regulators will [struggle with|clamp down on]",
     "[Oxbridge|Ivy league|Liberal arts|PPE] grads will flock to",
     "The inteligence community will raise concerns about",
-    "The [prime minister|US president|EU commisioner] will announce an independent investigation into",
-    "By the end of the [year|decade|month]:"
+    "The [prime minister|US president|EU commision] will announce an independent investigation into",
+    "By the end of the [year|decade|month] everyone will be talking about",
+    "We will enter a golden age of"
   ],
   "adjective": [
     "woke",
@@ -118,7 +119,8 @@
     "the Uber of",
     "pixel-perfect",
     "glamorous",
-    "strategic"
+    "strategic",
+    "hyperscale"
   ],
   "noun": [
     "fintech",
@@ -235,7 +237,11 @@
     "glocalisation",
     "immersive experiences",
     "quantified selves",
-    "democracy"
+    "democracy",
+    "datacenters",
+    "glamping",
+    "B2B services",
+    "hot-takes"
   ],
   "marketsegment": [
     "millenials",
@@ -253,7 +259,7 @@
     "the dark web",
     "activists",
     "lobbyists",
-    "pharmaceutical executives",
+    "[pharmaceutical|car industry|marketing|advertising] executives",
     "select-commitee hearings",
     "legal professionals",
     "city traders",
@@ -294,7 +300,7 @@
     "influencers",
     "ultra-high net worth individuals",
     "the 99%",
-    "AOC stans",
+    "[AOC|Richard Dawkins] stans",
     "TikTok celebrities",
     "“storytellers”",
     "entrepreneurs",
@@ -317,9 +323,9 @@
     "commercial drone pilots",
     "developers",
     "urban agriculture specialists",
-    "biomech technicians",
+    "[Conservative|Labour|Lib Dem|Green] party members",
     "touring funk bands",
-    "weather control engineers",
+    "meteorologists",
     "your microbiome",
     "creatives",
     "dentists",
@@ -331,7 +337,7 @@
     "data detectives",
     "walker/talkers",
     "stay at home dads",
-    "Guardian readers",
+    "[Guardian|Telegraph|FT|Sun|Daily Mail] readers",
     "suburban book groups",
     "HR departments",
     "smart-city skeptics",
