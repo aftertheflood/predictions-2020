@@ -11,7 +11,7 @@ const prediction = seed => {
     const noun = randomElement(rng(), data.noun);
     const mrkt = randomElement(rng(), data.marketsegment);
     const likelihood = randomElement(rng(), data.likelihood);
-    let prediction = `${adj} ${noun} for ${mrkt}`;
+    let prediction = `${select(adj, rng())} ${select(noun, rng())} for ${select(mrkt, rng())}`;
     let preamble = `${select(likelihood, rng())}`;
     let sentence = `${preamble} ${prediction}.`;
     sentence = sentence[0].toUpperCase() + sentence.substring(1);
