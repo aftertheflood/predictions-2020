@@ -109,11 +109,11 @@ article {
 
 .tweet-link {	margin-right: 20px; }
 
-.more-link:hover  { background: crimson; }
+.more-link:hover  { background: blueviolet; }
 .tweet-link:hover { background: lightseagreen; }
 
-.more-link:active  { background: chocolate; color: black; }
-.tweet-link:active { background: darkorchid; color: black; }
+.more-link:active  { color: black; }
+.tweet-link:active { color: black; }
 
 footer {
 	position: absolute;
@@ -173,7 +173,7 @@ footer {
 		max-width: 78%;
 		padding: 17px 8px 20px 20px;
 	}
-	.prediction { font-size: 5vh; }
+	.prediction { font-size: 4.2vh; }
 	.ui { margin-top: 28px; }
 	.more-link, .tweet-link {
 		padding: 15px 19px;
