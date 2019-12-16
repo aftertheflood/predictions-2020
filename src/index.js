@@ -5,7 +5,7 @@ const newSeed = ()=>{
     const seed = Math.floor(Math.random()*1000000000000);
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set('seed', seed);
-    window.history.pushState({}, '', `${location.pathname}?${urlParams}`);
+    window.history.replaceState({}, '', `${location.pathname}?${urlParams}`);
     return seed;
 };
 
