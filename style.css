@@ -28,7 +28,7 @@ h1 {
 	margin: 0;
 	font-family: Impact;
 	font-weight: normal;
-	font-size: 6.5vh;
+	font-size: 7.5vh;
 	line-height: 0.8;
 	letter-spacing: -0.03em;
 	text-transform: uppercase;
@@ -37,18 +37,18 @@ h1 {
 
 h2 {
 	margin: 10px 0 0 0;
-	color: coral;
+	color: blueviolet;
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 28px;
 	line-height: 0.8;
 	letter-spacing: -0.02em;
 	transform: scaleX(0.9);
 }
 
 h2 a {
-	color: coral;
+	color: blueviolet;
 	text-decoration: none;
-	border-bottom: 1px solid coral;
+	border-bottom: 1px solid blueviolet;
 }
 
 h2 a:hover {
@@ -142,8 +142,8 @@ footer {
 ----------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1200px) {
-	h1 { font-size: 5.5vh; }
-	h2 { font-size: 21px; }
+	h1 { font-size: 6.5vh; }
+	h2 { font-size: 24px; }
 	article { max-width: 80%; }
 	.prediction {
 		font-size: 7vh;
@@ -167,7 +167,11 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-	h2 { font-size: 19px; }
+	h1 { 
+		font-size: 7.5vh; 
+		line-height: 0.8;
+	}
+	h2 { font-size: 21px; }
 	article {
 		transform: skew(-3deg, 0);
 		max-width: 78%;
@@ -182,5 +186,8 @@ footer {
 }
 
 @media only screen and (max-width: 420px) {
-	h1 { font-size: 5vh; }
+	h1 { 
+		font-size: 7vh; 
+		line-height: 0.9;
+	}
 }
